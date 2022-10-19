@@ -17,6 +17,13 @@ public class Stack01 {
         this.arr[this.pointer] = value;
         this.pointer ++;
     }
+    public int pop(){//pop는 파라미터가 없다 컴퓨터는 위에것만 보기때문
+        //push 10 push 20 point 2
+        int value = this.arr[this.pointer-1];
+
+        this.pointer --;
+        return value;
+    }
 
     public int[] getArr() {
         return arr;
