@@ -22,6 +22,8 @@ public class UserDaoAbstract {
 
     public UserDaoAbstract(ConnectMaker connectMaker) {
         this.connectMaker = connectMaker;
+        //생성자를 이렇게 넣음으로써 connectMaker부분에 ConnectMaker을
+        //구현한 다른 구현체를 넣을수있다(Aws,Local)으로 다른 db로 연결해서 쓸수있다
     }
 
     public void delete(String id) throws SQLException {
