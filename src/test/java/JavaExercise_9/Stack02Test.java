@@ -4,6 +4,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.EmptyStackException;
+import java.util.Stack;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class Stack02Test {
@@ -32,8 +35,29 @@ class Stack02Test {
         st.push(20);
         assertEquals(20, st.pop());
         assertEquals(10, st.pop());
+        //스택이 비어있을때 pop()를 하면
+        //Exception예외의 검증
+        assertThrows(EmptyStackException.class,()->{
+            st.pop();//ArrayIndexOutOfBoundsException
+        });
 
     }
 
+    @Test
+    void isEmpty() {//비었을때,값이 들어있을때,값을 뺐을때
+        Stack02 st = new Stack02();
+        assertTrue(st.isEmpty());
+        st.push(10);
+        assertFalse(st.isEmpty());
+        st.pop();
+        assertTrue(st.isEmpty());
+    }
 
+    @Test
+    void realStack() {
+        Stack<Integer> st  = new Stack<>();
+        assertThrows(EmptyStackException.class,()->{
+            st.pop();//EmptyStackException//throw new EmptyStackException();
+        });
+    }
 }

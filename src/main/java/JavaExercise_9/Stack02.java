@@ -1,5 +1,7 @@
 package JavaExercise_9;
 
+import java.util.EmptyStackException;
+
 public class Stack02 {
     private Integer[] arr;
     private int top = 0;
@@ -22,9 +24,17 @@ public class Stack02 {
     }
 
     public int pop() {
+        if (this.isEmpty()) {
+            throw new EmptyStackException();//비었는데 pop하는경우 예외처리
+        }//           RuntimeException
         int value = this.arr[this.top-1];
         this.top --;
         return value;
+    }
+
+    public boolean isEmpty() {
+        boolean isEmpty = (this.top==0);
+        return isEmpty;
     }
 }
 
