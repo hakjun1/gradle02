@@ -60,4 +60,17 @@ class Stack02Test {
             st.pop();//EmptyStackException//throw new EmptyStackException();
         });
     }
+
+    @Test
+    void peek() {
+        Stack02 st = new Stack02();
+        assertThrows(EmptyStackException.class, () ->{
+            st.peek();
+        });
+        st.push(10);
+        int peeked = st.peek();
+        assertEquals(10,peeked);
+        //negative case 테스트 stack비었을때 peek
+        //EmptyStackException
+    }
 }
