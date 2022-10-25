@@ -42,7 +42,7 @@ public class HashTable2 {
             ht.insert(names[i], ht.hash(names[i]));
         }
         System.out.printf("%s %s\n", names.length, hashSet.size());
-        System.out.println(ht.search("HakjunYim"+"저장위치"));
+        System.out.println(ht.search("HakjunYim")+"저장위치");
     }
 
 
