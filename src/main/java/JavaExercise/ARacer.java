@@ -20,6 +20,7 @@ public class ARacer {
                 return key;
             }
         }
+
         return answer;
     }
 
