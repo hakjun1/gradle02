@@ -18,13 +18,13 @@ public class PrepareTest {
         int Student3AnsWerCnt = 0;
         //나머지를 이용
         for(int i=0; i<answers.length; i++){
-            if (answers[i] == one[i % 5]) {
+            if (answers[i] == student1[i % 5]) {
                 Student1AnsWerCnt ++;
             }
-            if (answers[i] == two[i % 8]) {
+            if (answers[i] == student2[i % 8]) {
                 Student2AnsWerCnt ++;
             }
-            if (answers[i] == three[i % 10]) {
+            if (answers[i] == student3[i % 10]) {
                 Student3AnsWerCnt ++;
             }
         }
