@@ -7,8 +7,8 @@ public class Prime {
         return a < b;
     }
 
-    boolean isPrime(int num){
-        for(int i=2; someOperation(i,num); i++){
+    boolean isPrime(StatementStrategy stmt){
+        for(int i=2; stmt.compare(i,num); i++){
             if (num % i == 0) {
                 return false;
             }
