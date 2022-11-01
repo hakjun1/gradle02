@@ -19,10 +19,14 @@ public class Prime {
 
     public static void main(String[] args) {
         Prime prime = new Prime();
+        boolean r = prime.isPrime(17);
+        System.out.println(r);
+
         System.out.println(prime.isPrime(13));
         System.out.println(prime.isPrime(17));
         System.out.println(prime.isPrime(19));
-        System.out.println(prime.isPrime(23));
+
+        System.out.println(prime.isPrime(24));
     }
 }
 
