@@ -2,9 +2,13 @@ package JavaExercise;
 
 public class Prime {
     //2부터 num까지 전부 나누고 나머지를 계산
+    //template callback = 함수를 변수로 받고싶을때
+    boolean someOperation(int a, int b) {
+        return a < b;
+    }
 
-    public static boolean isPrime(int num){
-        for(int i=2; i<num; i++){
+    boolean isPrime(int num){
+        for(int i=2; someOperation(i,num); i++){
             if (num % i == 0) {
                 return false;
             }
@@ -14,10 +18,11 @@ public class Prime {
 
 
     public static void main(String[] args) {
-        System.out.println(isPrime(13));
-        System.out.println(isPrime(17));
-        System.out.println(isPrime(19));
-        System.out.println(isPrime(23));
+        Prime prime = new Prime();
+        System.out.println(prime.isPrime(13));
+        System.out.println(prime.isPrime(17));
+        System.out.println(prime.isPrime(19));
+        System.out.println(prime.isPrime(23));
     }
 }
 
