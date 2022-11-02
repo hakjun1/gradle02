@@ -22,10 +22,17 @@ public class RemoveMultipleOf {
         }
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i)%2 == 0 && list.get(i)>2) list.remove(i);
-
+            //nums.removeIf(num -> num % 2 == 0 && num != 2);
         }
-        //nums.removeIf(num -> num % 2 == 0 && num != 2);
+
         System.out.println(list);
         System.out.println(list.size());
+
+        list.removeIf(num -> num % 3 == 0 && num != 3); //3을제외 3의배수
+        list.removeIf(num -> num % 5 == 0 && num != 5);
+        list.removeIf(num -> num % 7 == 0 && num != 7);
+        System.out.println(list);
+        System.out.println(list.size()); //15개
+
     }
 }
