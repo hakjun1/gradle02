@@ -16,9 +16,13 @@ public class Scovile {
             pq.add(mix);
             answer++;
         }
+        if(pq.peek() < K) return -1;
         return answer;
 
     }
 
 }
 //문제 1 런타임에러
+//while (pq.size() >= 2 && pq.peek() < K)
+//문제2 시간
+//if(pq.peek() < K) return -1;
